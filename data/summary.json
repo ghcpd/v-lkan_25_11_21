@@ -1,0 +1,96 @@
+{
+  "generated_at": 1763712895,
+  "window_minutes": 60,
+  "samples": 3,
+  "cpu": {
+    "avg_total": 19.056250000000002,
+    "per_core_avg": [
+      38.1,
+      47.6,
+      9.533333333333333,
+      14.299999999999999,
+      14.300000000000002,
+      14.300000000000002,
+      33.36666666666667,
+      28.566666666666666,
+      33.333333333333336,
+      0.0,
+      14.300000000000002,
+      0.0,
+      4.766666666666667,
+      9.533333333333333,
+      23.833333333333332,
+      19.066666666666666
+    ]
+  },
+  "memory": {
+    "percent": {
+      "avg": 71.76666666666667,
+      "min": 71.7,
+      "max": 71.8
+    },
+    "last": {
+      "total": 42657189888,
+      "used": 30648188928,
+      "free": 12009000960,
+      "available": 12009000960,
+      "percent": 71.8
+    }
+  },
+  "disk": {
+    "C:\\": {
+      "percent_avg": 79.9,
+      "percent_min": 79.9,
+      "percent_max": 79.9,
+      "last": {
+        "total": 268435451904,
+        "used": 214395420672,
+        "free": 54040031232,
+        "percent": 79.9
+      }
+    },
+    "D:\\": {
+      "percent_avg": 87.90000000000002,
+      "percent_min": 87.9,
+      "percent_max": 87.9,
+      "last": {
+        "total": 242014482432,
+        "used": 212840980480,
+        "free": 29173501952,
+        "percent": 87.9
+      }
+    }
+  },
+  "network": {
+    "Ethernet 3": {
+      "bytes_sent_delta": 1555,
+      "bytes_recv_delta": 1780,
+      "bytes_sent_per_sec": 777.5,
+      "bytes_recv_per_sec": 890.0
+    },
+    "Ethernet": {
+      "bytes_sent_delta": 3087,
+      "bytes_recv_delta": 2844,
+      "bytes_sent_per_sec": 1543.5,
+      "bytes_recv_per_sec": 1422.0
+    },
+    "Loopback Pseudo-Interface 1": {
+      "bytes_sent_delta": 0,
+      "bytes_recv_delta": 0,
+      "bytes_sent_per_sec": 0.0,
+      "bytes_recv_per_sec": 0.0
+    },
+    "vEthernet (Default Switch)": {
+      "bytes_sent_delta": 0,
+      "bytes_recv_delta": 0,
+      "bytes_sent_per_sec": 0.0,
+      "bytes_recv_per_sec": 0.0
+    },
+    "vEthernet (WSL (Hyper-V firewall))": {
+      "bytes_sent_delta": 0,
+      "bytes_recv_delta": 0,
+      "bytes_sent_per_sec": 0.0,
+      "bytes_recv_per_sec": 0.0
+    }
+  }
+}

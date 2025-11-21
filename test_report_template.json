@@ -1,0 +1,11 @@
+{
+  "test_name": "metrics_collector_full",
+  "timestamp": null,
+  "results": [],
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "errors": 0
+  },
+  "notes": "Root-level template for CI/test output collection."
+}

@@ -1,0 +1,6 @@
+{
+  "collection_interval_seconds": 5,
+  "output_dir": "./data",
+  "jsonl_file": "./data/metrics.jsonl",
+  "rotate_after_mb": 5
+}

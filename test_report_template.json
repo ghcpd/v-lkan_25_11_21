@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "status": "unknown",
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration": 0.0
+  },
+  "tests": []
+}

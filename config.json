@@ -1,0 +1,16 @@
+{
+  "collection_interval_seconds": 5,
+  "output_dir": "data",
+  "metrics_filename_prefix": "metrics",
+  "rotation": {
+    "type": "time", 
+    "when": "D",
+    "interval": 1,
+    "backup_count": 7
+  },
+  "summary": {
+    "enabled": false,
+    "output_path": "data/summary.json",
+    "window_minutes": 60
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "interval": 5,
+  "output_dir": "./data",
+  "output_file": "metrics.jsonl",
+  "max_size_bytes": 5242880
+}

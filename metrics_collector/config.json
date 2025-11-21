@@ -1,0 +1,7 @@
+{
+  "interval": 5,
+  "output_dir": "./data",
+  "base_filename": "metrics.jsonl",
+  "max_bytes": 10485760,
+  "backup_count": 5
+}

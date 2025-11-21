@@ -1,0 +1,11 @@
+{
+  "test_name": "metrics_collector_integration",
+  "timestamp": null,
+  "results": [],
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "errors": 0
+  },
+  "notes": "This template is used to collect test results programmatically from CI or local runs."
+}

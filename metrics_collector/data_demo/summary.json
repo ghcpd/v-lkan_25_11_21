@@ -1,0 +1,60 @@
+{
+  "samples": 3,
+  "cpu": {
+    "avg_total": 15.166666666666666,
+    "avg_per_core": [
+      0.0,
+      0.0,
+      33.333333333333336,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      66.66666666666667,
+      66.66666666666667,
+      0.0,
+      0.0,
+      66.66666666666667,
+      0.0,
+      0.0
+    ]
+  },
+  "memory": {
+    "avg_used": 30440737,
+    "avg_total": 41657412
+  },
+  "disk": {
+    "C:\\": {
+      "avg_total": 262143996,
+      "avg_used": 209086204
+    },
+    "D:\\": {
+      "avg_total": 236342268,
+      "avg_used": 207798529
+    }
+  },
+  "network": {
+    "Ethernet 3": {
+      "avg_bytes_sent": 619557533,
+      "avg_bytes_recv": 1485752608
+    },
+    "Ethernet": {
+      "avg_bytes_sent": 3523173982,
+      "avg_bytes_recv": 12163646267
+    },
+    "Loopback Pseudo-Interface 1": {
+      "avg_bytes_sent": 0,
+      "avg_bytes_recv": 0
+    },
+    "vEthernet (Default Switch)": {
+      "avg_bytes_sent": 147095,
+      "avg_bytes_recv": 0
+    },
+    "vEthernet (WSL (Hyper-V firewall))": {
+      "avg_bytes_sent": 69748998,
+      "avg_bytes_recv": 34252023
+    }
+  }
+}

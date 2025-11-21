@@ -1,0 +1,24 @@
+{
+  "test_run": {
+    "timestamp": "",
+    "framework": "pytest",
+    "python_version": "",
+    "total_tests": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 0.0
+  },
+  "test_suites": [],
+  "failed_tests": [],
+  "coverage": {
+    "total_statements": 0,
+    "covered_statements": 0,
+    "coverage_percentage": 0.0
+  },
+  "system_info": {
+    "os": "",
+    "cpu_count": 0,
+    "total_memory_mb": 0
+  }
+}

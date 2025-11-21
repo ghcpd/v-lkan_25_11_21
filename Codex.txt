@@ -1,0 +1,159 @@
+Develop a Python framework that continuously collects local system metrics, outputs structured JSON/JSONL and provides automated testing to validate functionality and data integrity. 1. Data Collection Metrics to collect: CPU: total usage, per-core usage. Memory: total, used, free, available. Disk: per partition total, used, free. Network: bytes sent and received per interface. Configurable collection interval (e.g., every 5 seconds). Use Python libraries like psutil. Runs under normal user permissions (no root/admin needed). 2. Data Storage Write collected metrics into JSONL files. Each record timestamped for time-series analysis. Example JSONL record: {"timestamp": 1731462200,"cpu": {"total": 35.5, "per_core": [20.0, 50.0, 30.0, 42.0]},"memory": {"total": 16384, "used": 8192, "free": 4096, "available": 8192},"disk": {"C:": {"total": 512000, "used": 256000, "free": 256000}},"network": {"eth0": {"bytes_sent": 1234567, "bytes_recv": 2345678}} } 3. Report Generation Optionally generate JSONL summary reports from collected metrics. Aggregate statistics per time window: Average CPU usage Memory usage trends Disk and network utilization Output summary in JSON format. 4. Automated Testing Test Artifacts: test_report_template.json to aggregate test results. Use Python pytest. 5. Project Architecture collector.py — main metric collection module. storage.py — JSON/JSONL writing and file rotation. reporter.py — optional report generation. config.json — collection interval, output paths. tests/ — unit and integration test scripts. run_metrics.sh — script to start collection. run_tests.sh — run automated tests and generate test report. 6. Output Artifacts (Mandatory) For reproducibility and testing, the project must generate: requirements.txt — Python dependencies. Dockerfile — containerized environment. setup.sh — local environment setup. run_test.sh — demo script for end-to-end test, including automated tests. README.md — usage guide and API documentation. test_report_template.json — template for collecting test results.
+
+
+
+Develop a Python framework that continuously collects local system metrics, outputs structured JSON/JSONL and provides automated testing to validate functionality and data integrity.
+
+Data Collection
+Metrics to collect:
+CPU: total usage, per-core usage.
+Memory: total, used, free, available.
+Disk: per partition total, used, free.
+Network: bytes sent and received per interface.
+Configurable collection interval (e.g., every 5 seconds).
+Use Python libraries like psutil.
+Runs under normal user permissions (no root/admin needed).
+Data Storage
+Write collected metrics into JSONL files.
+Each record timestamped for time-series analysis.
+Example JSONL record:
+{"timestamp": 1731462200,"cpu": {"total": 35.5, "per_core": [20.0, 50.0, 30.0, 42.0]},"memory": {"total": 16384, "used": 8192, "free": 4096, "available": 8192},"disk": {"C:": {"total": 512000, "used": 256000, "free": 256000}},"network": {"eth0": {"bytes_sent": 1234567, "bytes_recv": 2345678}} }
+Report Generation
+Optionally generate JSONL summary reports from collected metrics.
+Aggregate statistics per time window:
+Average CPU usage
+Memory usage trends
+Disk and network utilization
+Output summary in JSON format.
+Automated Testing
+Test Artifacts:
+test_report_template.json to aggregate test results.
+Use Python pytest.
+Project Architecture
+collector.py — main metric collection module.
+storage.py — JSON/JSONL writing and file rotation.
+reporter.py — optional report generation.
+config.json — collection interval, output paths.
+tests/ — unit and integration test scripts.
+run_metrics.sh — script to start collection.
+run_tests.sh — run automated tests and generate test report.
+Output Artifacts (Mandatory)
+For reproducibility and testing, the project must generate:
+requirements.txt — Python dependencies.
+Dockerfile — containerized environment.
+setup.sh — local environment setup.
+run_test.sh — demo script for end-to-end test, including automated tests.
+README.md — usage guide and API documentation.
+test_report_template.json — template for collecting test results.
+
+Implementation
+
+Built the configurable sampling loop plus CLI so CPU/memory/disk/network stats stream into JSONL with optional duration/output overrides, all driven by config.json (lines 1-6) and exposed via run_metrics.sh (lines 1-16) (collector.py (lines 18-123)).
+Added a thread-safe JSONL writer with timestamp-based rotation, along with helpers to read back recent records for reporting (storage.py (lines 15-64)).
+Implemented a reporting engine that loads JSONL data, filters by the requested window, and emits averaged CPU, memory trend, disk, and network utilization summaries or files (reporter.py (lines 31-167)).
+Created comprehensive automation assets: reproducibility requirements and Docker image (requirements.txt (lines 1-3), Dockerfile (lines 1-10)), end-to-end demo plus setup/test runners (run_test.sh (lines 1-30), run_tests.sh (lines 1-42)), and a JSON test-report template wired into the pipeline (test_report_template.json (lines 1-9)).
+Documented the workflow and APIs in the README (README.md (lines 1-82)) and added pytest coverage that exercises the collector mocks, storage rotation, and reporting aggregates (tests/test_collector.py (lines 28-71), tests/test_storage.py (lines 6-20), tests/test_reporter.py (lines 7-35)).
+Testing
+
+python -m pytest -q (and py -3 -m pytest -q) failed because no Python interpreter is available on this environment; please run ./run_tests.sh once Python is installed to execute the suite.
+Next Steps
+
+Install Python 3 (or point PYTHON_BIN to an existing interpreter), run ./setup.sh, and then ./run_tests.sh to generate test_report.json.
+Use ./run_test.sh to perform a short data collection demo, emit output/summary.json, and verify the framework end-to-end once the interpreter is in place.
+15 files changed
++696
+-1
+
+Undo
+
+View all changes
+Dockerfile
++10
+-0
+
+README.md
++82
+-1
+
+collector.py
++123
+-0
+
+config.json
++7
+-0
+
+reporter.py
++168
+-0
+
+requirements.txt
++3
+-0
+
+run_metrics.sh
++16
+-0
+
+run_test.sh
++30
+-0
+
+run_tests.sh
++42
+-0
+
+setup.sh
++15
+-0
+
+storage.py
++64
+-0
+
+test_report_template.json
++9
+-0
+
+test_collector.py
++71
+-0
+
+test_reporter.py
++36
+-0
+
+test_storage.py
++20
+-0
+
+run test
+
+
+Unable to run the automated tests: this environment has no Python interpreter. Both python -m pytest -q and py -3 -m pytest -q fail because neither python nor py exists on PATH (where python returns nothing). Once a Python 3 runtime is available, run ./run_tests.sh (or python -m pytest) from v-lkan_25_11_21 to execute the suite and generate test_report.json.
+
+D:/package/venv310/Scripts/python.exe
+
+
+Tests executed with D:/package/venv310/Scripts/python.exe -m pytest -q from v-lkan_25_11_21; all 5 tests passed.
+
+输出磁盘使用信息的结果和分析分拣
+
+
+Disk Usage
+
+Command python collector.py snapshot shows C: total 268 GB, used 214 GB (≈80 %), free 54 GB; D: total 242 GB, used 213 GB (≈88 %), free 29 GB.
+Sorted by utilization: D: is most constrained (≈88 %); C: follows (≈80 %).
+Analysis: D: has only ~29 GB free, so consider cleaning large data, moving archives off-drive, or extending capacity; C: still has ~54 GB free but monitor growth, especially if OS/app updates target it.
+Next steps: rerun collector.py periodically to track trends or generate a summary with python reporter.py --source output/metrics.jsonl --window 3600 --output output/summary.json for longer-term disk insights.
+
+yes
+
+
+👍
+
+运行一下
+
+
+Ran collector.py for ~5 s via D:/package/venv310/Scripts/python.exe collector.py --duration 5; new metrics appended to output/metrics.jsonl.
+Generated a reporting snapshot with D:/package/venv310/Scripts/python.exe reporter.py --source output/metrics.jsonl --window 300, yielding the JSON summary shown above (disk + network averages, memory trend, CPU stats).

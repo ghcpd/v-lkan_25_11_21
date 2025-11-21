@@ -1,0 +1,7 @@
+{
+  "collection_interval": 5,
+  "output_path": "output/metrics.jsonl",
+  "max_file_size_bytes": 1048576,
+  "summary_output_path": "output/summary.json",
+  "summary_window_seconds": 300
+}

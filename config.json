@@ -1,0 +1,15 @@
+{
+  "collection_interval": 5,
+  "output_directory": "data",
+  "metrics_file": "metrics.jsonl",
+  "summary_file": "summary.json",
+  "log_level": "INFO",
+  "max_file_size_mb": 100,
+  "rotate_files": true,
+  "metrics": {
+    "cpu": true,
+    "memory": true,
+    "disk": true,
+    "network": true
+  }
+}

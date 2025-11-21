@@ -3,34 +3,3 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Virtual environment
-venv/
-env/
-ENV/
-
-# Data and output files
-data/
-test_reports/
-*.jsonl
-*.log
-
-# Test coverage
-.coverage
-htmlcov/
-.pytest_cache/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Build artifacts
-build/
-dist/
-*.egg-info/

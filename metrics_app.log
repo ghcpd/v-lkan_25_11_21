@@ -1,0 +1,10 @@
+2025-11-21 15:33:35,954 - __main__ - INFO - Metrics application initialized
+2025-11-21 15:33:58,444 - __main__ - INFO - Metrics application initialized
+2025-11-21 15:33:58,444 - __main__ - INFO - Starting continuous metrics collection
+2025-11-21 15:33:58,444 - __main__ - INFO - Collection interval: 5 seconds
+2025-11-21 15:34:14,130 - __main__ - INFO - Duration limit of 15s reached
+2025-11-21 15:34:14,131 - __main__ - INFO - Collection stopped. Total metrics collected: 3
+2025-11-21 15:34:18,766 - __main__ - INFO - Metrics application initialized
+2025-11-21 15:34:18,768 - __main__ - INFO - Generating report from data\metrics.jsonl
+2025-11-21 15:34:18,769 - reporter - INFO - Report saved to data\summary.json
+2025-11-21 15:34:18,769 - __main__ - INFO - Report generated: data\summary.json

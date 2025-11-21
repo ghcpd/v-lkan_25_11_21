@@ -1,0 +1,179 @@
+{
+  "generated_at": 1763710458,
+  "time_window": {
+    "start": 1763710415,
+    "end": 1763710448,
+    "duration_seconds": 33,
+    "sample_count": 4
+  },
+  "cpu_analysis": {
+    "total": {
+      "average": 7.9,
+      "median": 8.4,
+      "min": 2.9,
+      "max": 11.9,
+      "samples": 4
+    },
+    "per_core": {
+      "core_0": {
+        "average": 23.23,
+        "min": 0.0,
+        "max": 42.9
+      },
+      "core_1": {
+        "average": 6.7,
+        "min": 0.0,
+        "max": 14.3
+      },
+      "core_2": {
+        "average": 38.85,
+        "min": 14.3,
+        "max": 62.5
+      },
+      "core_3": {
+        "average": 10.28,
+        "min": 0.0,
+        "max": 28.6
+      },
+      "core_4": {
+        "average": 13.4,
+        "min": 0.0,
+        "max": 25.0
+      },
+      "core_5": {
+        "average": 13.85,
+        "min": 12.5,
+        "max": 14.3
+      },
+      "core_6": {
+        "average": 29.02,
+        "min": 14.3,
+        "max": 50.0
+      },
+      "core_7": {
+        "average": 13.4,
+        "min": 0.0,
+        "max": 25.0
+      },
+      "core_8": {
+        "average": 12.7,
+        "min": 0.0,
+        "max": 22.2
+      },
+      "core_9": {
+        "average": 16.07,
+        "min": 0.0,
+        "max": 37.5
+      },
+      "core_10": {
+        "average": 16.98,
+        "min": 0.0,
+        "max": 28.6
+      },
+      "core_11": {
+        "average": 23.65,
+        "min": 0.0,
+        "max": 57.1
+      },
+      "core_12": {
+        "average": 6.25,
+        "min": 0.0,
+        "max": 25.0
+      },
+      "core_13": {
+        "average": 35.73,
+        "min": 28.6,
+        "max": 57.1
+      },
+      "core_14": {
+        "average": 21.0,
+        "min": 0.0,
+        "max": 42.9
+      },
+      "core_15": {
+        "average": 13.4,
+        "min": 0.0,
+        "max": 28.6
+      }
+    }
+  },
+  "memory_analysis": {
+    "total_mb": 40681,
+    "used": {
+      "average_mb": 30099.25,
+      "min_mb": 29919,
+      "max_mb": 30430
+    },
+    "available": {
+      "average_mb": 10580.75,
+      "min_mb": 10250,
+      "max_mb": 10761
+    },
+    "samples": 4
+  },
+  "disk_analysis": {
+    "C:\\": {
+      "total_mb": 255999,
+      "used": {
+        "average_mb": 204427.75,
+        "min_mb": 204426,
+        "max_mb": 204433
+      },
+      "free": {
+        "average_mb": 51571.25,
+        "min_mb": 51566,
+        "max_mb": 51573
+      }
+    },
+    "D:\\": {
+      "total_mb": 230802,
+      "used": {
+        "average_mb": 202980,
+        "min_mb": 202980,
+        "max_mb": 202980
+      },
+      "free": {
+        "average_mb": 27822,
+        "min_mb": 27822,
+        "max_mb": 27822
+      }
+    }
+  },
+  "network_analysis": {
+    "Ethernet 3": {
+      "total_bytes_sent": 683397249,
+      "total_bytes_recv": 1513866593,
+      "delta_bytes_sent": 1972932,
+      "delta_bytes_recv": 280805,
+      "samples": 4
+    },
+    "Ethernet": {
+      "total_bytes_sent": 3594878711,
+      "total_bytes_recv": 12198398162,
+      "delta_bytes_sent": 2153632,
+      "delta_bytes_recv": 401094,
+      "samples": 4
+    },
+    "Loopback Pseudo-Interface 1": {
+      "total_bytes_sent": 0,
+      "total_bytes_recv": 0,
+      "delta_bytes_sent": 0,
+      "delta_bytes_recv": 0,
+      "samples": 4
+    },
+    "vEthernet (Default Switch)": {
+      "total_bytes_sent": 147162,
+      "total_bytes_recv": 0,
+      "delta_bytes_sent": 0,
+      "delta_bytes_recv": 0,
+      "samples": 4
+    },
+    "vEthernet (WSL (Hyper-V firewall))": {
+      "total_bytes_sent": 69749065,
+      "total_bytes_recv": 34252023,
+      "delta_bytes_sent": 0,
+      "delta_bytes_recv": 0,
+      "samples": 4
+    }
+  }
+}
